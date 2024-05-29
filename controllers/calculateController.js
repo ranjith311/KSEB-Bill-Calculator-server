@@ -23,7 +23,7 @@ const data = [
     }
 ]
 
-const getTarif = () => {
+const getTarif = (req,res) => {
     try {
         res.status(200).json({ success: true, result: data })
     } catch (error) {
@@ -78,7 +78,7 @@ const calculate = (req, res) => {
         }
         const result = calculateKSEBBill(unitsUsed)
         res.status(200).json({ success: true, result })
-        
+
     } catch (error) {
         res.status(error.code || 500).json({ msg: error.msg || "Something went wrong" })
     }
