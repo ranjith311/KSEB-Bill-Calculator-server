@@ -10,8 +10,7 @@ app.use(cors({
     credentials:true
 }))
 
-app.use("/api",require("./routes/calculateRoute"))
-
+app.use("/api",require("./routes/calculateRoute"));
 
 
 app.listen(PORT,()=>console.log(`Server is running at port ${PORT}`))
